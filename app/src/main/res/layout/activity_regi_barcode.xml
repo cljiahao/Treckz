@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegiBarcode">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="@string/bar_Instruction_txt"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline4" />
+
+    <TextView
+        android:id="@+id/barBrandtxt"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name_of_brand"
+        app:layout_constraintBottom_toBottomOf="@id/barBrand"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toTopOf="@id/barBrand" />
+
+    <EditText
+        android:id="@+id/barBrand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:hint="@string/enter_brand_name"
+        android:minHeight="48dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintStart_toEndOf="@id/barBrandtxt"
+        app:layout_constraintTop_toTopOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/barNametxt"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name_of_product"
+        app:layout_constraintBottom_toBottomOf="@id/barName"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toTopOf="@id/barName" />
+
+    <EditText
+        android:id="@+id/barName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/enter_product_name"
+        android:minHeight="48dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintStart_toEndOf="@id/barNametxt"
+        app:layout_constraintTop_toBottomOf="@id/barBrand" />
+
+    <TextView
+        android:id="@+id/barNumtxt"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/barcode_number"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/barNum"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
+        app:layout_constraintTop_toTopOf="@id/barNum" />
+
+    <EditText
+        android:id="@+id/barNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/enter_barcode_number"
+        android:minHeight="48dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline5"
+        app:layout_constraintStart_toEndOf="@id/barNumtxt"
+        app:layout_constraintTop_toBottomOf="@id/barName" />
+
+
+    <Button
+        android:id="@+id/submitBarBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="@string/submit"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

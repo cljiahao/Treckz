@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegiFoodForm">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="@string/bar_Instruction_txt"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/guideline6"
+        app:layout_constraintEnd_toEndOf="@id/guideline8"
+        app:layout_constraintStart_toStartOf="@id/guideline7" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name_of_brand"
+        app:layout_constraintStart_toStartOf="@id/guideline7"
+        android:id="@+id/regiBrandtxt"
+        app:layout_constraintTop_toTopOf="@id/regiBrand"
+        app:layout_constraintBottom_toBottomOf="@id/regiBrand"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:textSize="15sp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/regiBrand"
+        app:layout_constraintStart_toEndOf="@id/regiBrandtxt"
+        app:layout_constraintTop_toTopOf="@id/guideline6"
+        app:layout_constraintEnd_toEndOf="@id/guideline8"
+        android:hint="@string/enter_brand_name"/>
+
+    <TextView
+        android:id="@+id/regiNametxt"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name_of_product"
+        app:layout_constraintBottom_toBottomOf="@id/regiName"
+        app:layout_constraintStart_toStartOf="@id/guideline7"
+        app:layout_constraintTop_toTopOf="@id/regiName" />
+
+    <EditText
+        android:id="@+id/regiName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:hint="@string/enter_product_name"
+        android:minHeight="48dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline8"
+        app:layout_constraintStart_toEndOf="@id/regiNametxt"
+        app:layout_constraintTop_toBottomOf="@id/regiBrand"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/regiNumtxt"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/barcode_number"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/regiNum"
+        app:layout_constraintStart_toStartOf="@id/guideline7"
+        app:layout_constraintTop_toTopOf="@id/regiNum" />
+
+    <EditText
+        android:id="@+id/regiNum"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/enter_barcode_number"
+        android:minHeight="48dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline8"
+        app:layout_constraintStart_toEndOf="@id/regiNumtxt"
+        app:layout_constraintTop_toBottomOf="@id/regiName" />
+
+    <TextView
+        android:id="@+id/regiDatetxt"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/expiry_date_scanned"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/regiDateScan"
+        app:layout_constraintStart_toStartOf="@id/guideline7"
+        app:layout_constraintTop_toTopOf="@id/regiDateScan" />
+
+    <EditText
+        android:id="@+id/regiDateScan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:minHeight="48dp"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline8"
+        app:layout_constraintStart_toEndOf="@id/regiDatetxt"
+        app:layout_constraintTop_toBottomOf="@id/regiNum"/>
+
+    <TextView
+        android:id="@+id/quantitytxt"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/quanLay"
+        app:layout_constraintStart_toStartOf="@id/guideline7"
+        app:layout_constraintTop_toTopOf="@id/quanLay" />
+
+    <LinearLayout
+        android:id="@+id/quanLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/quantitytxt"
+        app:layout_constraintTop_toBottomOf="@id/regiDateScan">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/less"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="3dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_remove" />
+
+        </androidx.cardview.widget.CardView>
+
+        <EditText
+            android:id="@+id/addSubNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/one" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardCornerRadius="3dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/submitBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="@string/submit"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

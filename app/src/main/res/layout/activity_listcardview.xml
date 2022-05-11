@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/listCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:id="@+id/innerCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/productInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/brandTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/brand_name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/brandName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/brandTxt"
+                android:text="@string/placeholder" />
+
+            <TextView
+                android:id="@+id/productTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/brandTxt"
+                android:text="@string/product_name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/productTxt"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/productTxt"
+                android:text="@string/placeholder" />
+
+            <TextView
+                android:id="@+id/totalTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/totalQuantity"
+                android:layout_toStartOf="@id/totalQuantity"
+                android:text="@string/totalsum"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/productTxt"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="30dp"
+                android:text="1000" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/expiryInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productInfo"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/expiryTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expiry_dates"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/expiryMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/expiryInfo"
+            android:layout_toEndOf="@id/expiryInfo">
+
+            <TextView
+                android:id="@+id/earliestDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="soon" />
+
+            <ImageView
+                android:id="@+id/downArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/earliestDate"
+                android:src="@drawable/ic_downarrow" />
+
+            <TextView
+                android:id="@+id/singleQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:text="100" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/expandExpiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expiryMain"
+            android:layout_alignStart="@id/expiryMain">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/expiryRecView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+
+            <ImageView
+                android:id="@+id/upArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expiryRecView"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_uparrow" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
